@@ -47,8 +47,6 @@ let workers = [
 
 printArrayWorkers(workers);
 
-document.getElementById("cards");
-
 for (let i=0; i < workers.length; i++){
 
     cards.innerHTML += 
