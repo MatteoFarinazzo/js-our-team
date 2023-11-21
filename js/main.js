@@ -63,8 +63,6 @@ for (let i=0; i < workers.length; i++){
 
 
 
-
-
 //-------Funzioni-----
 
 
