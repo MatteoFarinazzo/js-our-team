@@ -47,7 +47,7 @@ let workers = [
 
 printArrayWorkers(workers);
 
-let cards = document.getElementById("cards");
+document.getElementById("cards");
 
 for (let i=0; i < workers.length; i++){
 
