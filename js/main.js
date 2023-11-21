@@ -49,6 +49,7 @@ printArrayWorkers(workers);
 
 for (let i=0; i < workers.length; i++){
 
+    //document.getElementById("cards").innerHTML += (la stringa sotto fa la stessa cosa)
     cards.innerHTML += 
     ` <div class="col-4 "> <div class="card rounded-0 border-light">
     <img src="${workers[i].img}" class="" alt="">
@@ -72,7 +73,6 @@ function printArrayWorkers(arrayWorkers) {
         let workers = arrayWorkers[i];
 
         printObject(workers);
-        //printHTML(workers);
     }
 }
 
