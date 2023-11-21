@@ -2,7 +2,7 @@
 
 let workers = [
     {
-        img: `<img src="img/wayne-barnett-founder-ceo.jpg">`,
+        img: "img/wayne-barnett-founder-ceo.jpg",
         name: "Wayne",
         surname: "Barrett",
         role: "Founder & Ceo",
@@ -61,7 +61,7 @@ function printArrayWorkers(arrayWorkers) {
         let workers = arrayWorkers[i];
 
         printObject(workers);
-        printHTML(workers);
+        //printHTML(workers);
     }
 }
 
@@ -84,6 +84,34 @@ function printObject(object) {
 
 
 
+let containerCard = document.getElementById("cards")
+for (let i = 0; i< workers.length; i++){
+
+    let member = workers[i]
+
+
+    for (let key in member){
+        let memberInfo = member[key]
+    }
+
+
+    let card =  ` <div class= "cards">
+    <img src="${[member.img]}" class="" alt="">
+    <div class="">
+    <h4 class="">${[member.name]}<h4>
+    <p class="">${[member.surname]}</p>
+    <p class="">${[member.role]}</p>
+    </div>
+    </div> `
+
+    containerCard.insertAdjacentHTML("beforeend",card)
+
+}
+
+
+
+
+/*
 function printHTML(object){
     let card = "";
 
@@ -97,6 +125,8 @@ function printHTML(object){
 
     document.getElementById("container_squares").innerHTML += card;
 
-
 }
+
+*/
+
 
