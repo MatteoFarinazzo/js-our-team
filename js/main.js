@@ -47,6 +47,20 @@ let workers = [
 
 printArrayWorkers(workers);
 
+let cards = document.getElementById("cards");
+
+for (let i=0; i < workers.length; i++){
+
+    cards.innerHTML += 
+    ` <div class="col-4"> <div class="card">
+    <img src="${workers[i].img}" class="" alt="">
+    <div class="card-body">
+    <h4 class="">${workers[i].name} ${workers[i].surname}<h4>
+    <p class="">${workers[i].role}</p>
+    </div>
+    </div> `
+}
+
 
 
 
@@ -81,52 +95,3 @@ function printObject(object) {
     console.log(string);
 
 }
-
-
-
-let containerCard = document.getElementById("cards")
-for (let i = 0; i< workers.length; i++){
-
-    let member = workers[i]
-
-
-    for (let key in member){
-        let memberInfo = member[key]
-    }
-
-
-    let card =  ` <div class= "cards">
-    <img src="${[member.img]}" class="" alt="">
-    <div class="">
-    <h4 class="">${[member.name]}<h4>
-    <p class="">${[member.surname]}</p>
-    <p class="">${[member.role]}</p>
-    </div>
-    </div> `
-
-    containerCard.insertAdjacentHTML("beforeend",card)
-
-}
-
-
-
-
-/*
-function printHTML(object){
-    let card = "";
-
-    card += `<div class="square" > <p>`;
-
-    for (let key in object) {
-        card += "\t" + key + object[key] + "\n";
-    }
-
-    card += "</p>";
-
-    document.getElementById("container_squares").innerHTML += card;
-
-}
-
-*/
-
-
