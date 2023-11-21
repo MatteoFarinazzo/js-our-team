@@ -52,15 +52,15 @@ let cards = document.getElementById("cards");
 for (let i=0; i < workers.length; i++){
 
     cards.innerHTML += 
-    ` <div class="col-4 "> <div class="card rounded-0">
+    ` <div class="col-4 "> <div class="card rounded-0 border-light">
     <img src="${workers[i].img}" class="" alt="">
     <div class="card-body">
     <h4 class="text-center">${workers[i].name} ${workers[i].surname}</h4>
-    <p class="text-center">${workers[i].role}</p>
+    <p class="text-center text-secondary">${workers[i].role}</p>
     </div>
     </div>
     </div> `
-}
+};
 
 
 
