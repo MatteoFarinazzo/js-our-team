@@ -2,7 +2,7 @@
 
 let workers = [
     {
-        img: "img/wayne-barnett-founder-ceo.jpg",
+        img: `<img src="img/wayne-barnett-founder-ceo.jpg">`,
         name: "Wayne",
         surname: "Barrett",
         role: "Founder & Ceo",
@@ -50,7 +50,22 @@ printArrayWorkers(workers);
 
 
 
+
+
 //-------Funzioni-----
+
+
+function printArrayWorkers(arrayWorkers) {
+    for (let i = 0; i < arrayWorkers.length; i++) {
+
+        let workers = arrayWorkers[i];
+
+        printObject(workers);
+        printHTML(workers);
+    }
+}
+
+
 
 function printObject(object) {
     let string = "";
@@ -69,12 +84,19 @@ function printObject(object) {
 
 
 
-function printArrayWorkers(arrayWorkers) {
-    for (let i = 0; i < arrayWorkers.length; i++) {
+function printHTML(object){
+    let card = "";
 
-        let workers = arrayWorkers[i];
-        
-        printObject(workers);
+    card += `<div class="square" > <p>`;
+
+    for (let key in object) {
+        card += "\t" + key + object[key] + "\n";
     }
+
+    card += "</p>";
+
+    document.getElementById("container_squares").innerHTML += card;
+
+
 }
 
